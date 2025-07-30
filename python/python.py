@@ -133,7 +133,8 @@ print(contacts)
 print(len(contacts))
 '''
 
-#for循环
+#for循环（条件结束已知）
+"""
 list=[36.1,37.2,37.7,36.5]
 for temperature in list:
     if temperature>37:
@@ -154,13 +155,89 @@ for i in range(5,10):
     print(i)
 for i in range(1,11,2):
     print(i)
+"""
 
+#while循环（条件结束已知）
+'''
+while int(input("请输入一个数："))!=0:
+    print("不等于0")
+'''
 
+#格式化字符
+"""
+name="张三"
+year="蛇年"
+message='''
+你好，{0}
+{1}快乐!
+'''.format(name,year)
+print(message)
 
+message='''
+你好，{name}
+{year}快乐!
+'''.format(year=year,name=name)
+print(message)
 
+message=f'''
+你好，{name}
+{year}快乐!
+'''
+print(message)
 
+GPA=3.955
+message='''
+{0},你好
+你的绩点为{1:.2f}
+'''.format(name,GPA)
+print(message)
 
+message=f'''
+{name},你好
+你的绩点为{GPA}
+'''
+print(message)
+"""
 
+#函数
+'''
+def calculate(a,b):
+    c=a
+    a=b
+    b=c
+    print("a=",a," b=",b)
+a=1
+b=2
+calculate(a,b)
+print("a=",a," b=",b)
+print(type(calculate(a,b)))
+def calculate(a,b):
+    c=a+b
+    return c
+c=calculate(a,b)
+print(c)
+print(type(calculate))
+print(type(calculate(a,b)))
+'''
+
+#引入模块
+'''
+from statistics import mean
+print(mean([19,-5,36]))
+
+import statistics
+print(statistics.median([69,124,-32,27,217]))
+
+from statistics import *
+print(median([69,124,-32,27,217]))
+'''
+
+#引入第三方模块
+#方法：
+#·在工具中打开系统Shell
+#（或者在pip所在目录打开shell）
+#·输入命令：pip install 模块名
+#（卸载命令：pip uninstall 模块名）
 
 
 
